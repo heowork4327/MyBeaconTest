@@ -9,21 +9,26 @@
 /* Begin PBXBuildFile section */
 		2A284EC529348FD6002E7F4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A284EC429348FD6002E7F4B /* AppDelegate.swift */; };
 		2A284EC729348FD6002E7F4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A284EC629348FD6002E7F4B /* SceneDelegate.swift */; };
-		2A284EC929348FD6002E7F4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A284EC829348FD6002E7F4B /* ViewController.swift */; };
+		2A284EC929348FD6002E7F4B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A284EC829348FD6002E7F4B /* MainViewController.swift */; };
 		2A284ECC29348FD6002E7F4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A284ECA29348FD6002E7F4B /* Main.storyboard */; };
 		2A284ECE29348FD8002E7F4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A284ECD29348FD8002E7F4B /* Assets.xcassets */; };
 		2A284ED129348FD8002E7F4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A284ECF29348FD8002E7F4B /* LaunchScreen.storyboard */; };
+		2A284EDD293491EC002E7F4B /* DefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A284EDC293491EC002E7F4B /* DefaultTableViewCell.swift */; };
+		2A284EE0293496CA002E7F4B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A284EDF293496CA002E7F4B /* SnapKit */; };
+		2A284EE329349D35002E7F4B /* MyCustom+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A284EE229349D35002E7F4B /* MyCustom+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2A284EC129348FD6002E7F4B /* MyBeaconTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBeaconTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A284EC429348FD6002E7F4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A284EC629348FD6002E7F4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2A284EC829348FD6002E7F4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2A284EC829348FD6002E7F4B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2A284ECB29348FD6002E7F4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A284ECD29348FD8002E7F4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A284ED029348FD8002E7F4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A284ED229348FD8002E7F4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A284EDC293491EC002E7F4B /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTableViewCell.swift; sourceTree = "<group>"; };
+		2A284EE229349D35002E7F4B /* MyCustom+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyCustom+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A284EE0293496CA002E7F4B /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +48,7 @@
 			children = (
 				2A284EC329348FD6002E7F4B /* MyBeaconTest */,
 				2A284EC229348FD6002E7F4B /* Products */,
+				2A284EDE293496CA002E7F4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +63,56 @@
 		2A284EC329348FD6002E7F4B /* MyBeaconTest */ = {
 			isa = PBXGroup;
 			children = (
+				2A284EE129349CED002E7F4B /* Common */,
+				2A284ED92934910B002E7F4B /* View */,
 				2A284EC429348FD6002E7F4B /* AppDelegate.swift */,
 				2A284EC629348FD6002E7F4B /* SceneDelegate.swift */,
-				2A284EC829348FD6002E7F4B /* ViewController.swift */,
-				2A284ECA29348FD6002E7F4B /* Main.storyboard */,
 				2A284ECD29348FD8002E7F4B /* Assets.xcassets */,
 				2A284ECF29348FD8002E7F4B /* LaunchScreen.storyboard */,
 				2A284ED229348FD8002E7F4B /* Info.plist */,
 			);
 			path = MyBeaconTest;
+			sourceTree = "<group>";
+		};
+		2A284ED92934910B002E7F4B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2A284EDB293491D8002E7F4B /* TableViewCell */,
+				2A284EDA2934911B002E7F4B /* Main */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A284EDA2934911B002E7F4B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2A284ECA29348FD6002E7F4B /* Main.storyboard */,
+				2A284EC829348FD6002E7F4B /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2A284EDB293491D8002E7F4B /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2A284EDC293491EC002E7F4B /* DefaultTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		2A284EDE293496CA002E7F4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A284EE129349CED002E7F4B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2A284EE229349D35002E7F4B /* MyCustom+Extension.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +131,9 @@
 			dependencies = (
 			);
 			name = MyBeaconTest;
+			packageProductDependencies = (
+				2A284EDF293496CA002E7F4B /* SnapKit */,
+			);
 			productName = MyBeaconTest;
 			productReference = 2A284EC129348FD6002E7F4B /* MyBeaconTest.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +162,9 @@
 				Base,
 			);
 			mainGroup = 2A284EB829348FD6002E7F4B;
+			packageReferences = (
+				2A284ED8293490FE002E7F4B /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 2A284EC229348FD6002E7F4B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +192,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A284EC929348FD6002E7F4B /* ViewController.swift in Sources */,
+				2A284EC929348FD6002E7F4B /* MainViewController.swift in Sources */,
+				2A284EDD293491EC002E7F4B /* DefaultTableViewCell.swift in Sources */,
 				2A284EC529348FD6002E7F4B /* AppDelegate.swift in Sources */,
+				2A284EE329349D35002E7F4B /* MyCustom+Extension.swift in Sources */,
 				2A284EC729348FD6002E7F4B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,9 +358,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.heowork4327.Beacon.MyBeaconTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -330,9 +389,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.heowork4327.Beacon.MyBeaconTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +420,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2A284ED8293490FE002E7F4B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2A284EDF293496CA002E7F4B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A284ED8293490FE002E7F4B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2A284EB929348FD6002E7F4B /* Project object */;
 }
