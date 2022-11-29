@@ -14,15 +14,13 @@ import Foundation
 ///   - fileName: Swift 파일이름
 ///   - lineNumber: 라인
 public func debugLog(_ object: Any..., functionName: String = #function, fileName: String = #file, lineNumber: Int = #line) {
-  #if DEBUG
+    #if DEBUG
     let className = (fileName as NSString).lastPathComponent
     var log: String = ""
-    
-    for add in object {
-        log += "\(String(describing: add))"
-    }
-    
+        for add in object {
+            log += "\(add)"
+        }
     print("<\(className)> \(functionName) [#\(lineNumber)]| \(log)\n")
-  #endif
-}
+    #endif
+    }
 

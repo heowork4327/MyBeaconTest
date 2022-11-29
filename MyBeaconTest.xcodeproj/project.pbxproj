@@ -16,6 +16,7 @@
 		2A284EDD293491EC002E7F4B /* DefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A284EDC293491EC002E7F4B /* DefaultTableViewCell.swift */; };
 		2A284EE0293496CA002E7F4B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A284EDF293496CA002E7F4B /* SnapKit */; };
 		2A284EE329349D35002E7F4B /* MyCustom+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A284EE229349D35002E7F4B /* MyCustom+Extension.swift */; };
+		2A4FEE6C2935FA860004F24A /* MinewTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4FEE6B2935FA860004F24A /* MinewTestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,13 @@
 		2A284ED229348FD8002E7F4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A284EDC293491EC002E7F4B /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTableViewCell.swift; sourceTree = "<group>"; };
 		2A284EE229349D35002E7F4B /* MyCustom+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyCustom+Extension.swift"; sourceTree = "<group>"; };
+		2A4FEE652935F9890004F24A /* MinewBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinewBeaconManager.h; sourceTree = "<group>"; };
+		2A4FEE662935F9890004F24A /* MinewBeaconValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinewBeaconValue.h; sourceTree = "<group>"; };
+		2A4FEE672935F9A30004F24A /* MinewBeaconSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinewBeaconSetting.h; sourceTree = "<group>"; };
+		2A4FEE682935F9A30004F24A /* MinewBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MinewBeacon.h; path = "../../../../Downloads/26_ICES_BEACON/BeaconAdmin/iOS/[iOS]MinewBeaconAdmin x86&ARM 2020.09.18 11_23AM/MinewBeacon.h"; sourceTree = "<group>"; };
+		2A4FEE692935F9A30004F24A /* MinewBeaconConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinewBeaconConnection.h; sourceTree = "<group>"; };
+		2A4FEE6A2935F9E40004F24A /* MinewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinewHeader.h; sourceTree = "<group>"; };
+		2A4FEE6B2935FA860004F24A /* MinewTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinewTestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,7 @@
 		2A284EC329348FD6002E7F4B /* MyBeaconTest */ = {
 			isa = PBXGroup;
 			children = (
+				2A4FEE632935F96C0004F24A /* MinewIbeacon */,
 				2A284EE129349CED002E7F4B /* Common */,
 				2A284ED92934910B002E7F4B /* View */,
 				2A284EC429348FD6002E7F4B /* AppDelegate.swift */,
@@ -70,6 +79,7 @@
 				2A284ECD29348FD8002E7F4B /* Assets.xcassets */,
 				2A284ECF29348FD8002E7F4B /* LaunchScreen.storyboard */,
 				2A284ED229348FD8002E7F4B /* Info.plist */,
+				2A4FEE6A2935F9E40004F24A /* MinewHeader.h */,
 			);
 			path = MyBeaconTest;
 			sourceTree = "<group>";
@@ -113,6 +123,19 @@
 				2A284EE229349D35002E7F4B /* MyCustom+Extension.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		2A4FEE632935F96C0004F24A /* MinewIbeacon */ = {
+			isa = PBXGroup;
+			children = (
+				2A4FEE652935F9890004F24A /* MinewBeaconManager.h */,
+				2A4FEE662935F9890004F24A /* MinewBeaconValue.h */,
+				2A4FEE682935F9A30004F24A /* MinewBeacon.h */,
+				2A4FEE692935F9A30004F24A /* MinewBeaconConnection.h */,
+				2A4FEE672935F9A30004F24A /* MinewBeaconSetting.h */,
+				2A4FEE6B2935FA860004F24A /* MinewTestViewController.swift */,
+			);
+			path = MinewIbeacon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A284EC929348FD6002E7F4B /* MainViewController.swift in Sources */,
+				2A4FEE6C2935FA860004F24A /* MinewTestViewController.swift in Sources */,
 				2A284EDD293491EC002E7F4B /* DefaultTableViewCell.swift in Sources */,
 				2A284EC529348FD6002E7F4B /* AppDelegate.swift in Sources */,
 				2A284EE329349D35002E7F4B /* MyCustom+Extension.swift in Sources */,
@@ -351,6 +375,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,6 +387,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -382,6 +408,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -393,6 +420,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
