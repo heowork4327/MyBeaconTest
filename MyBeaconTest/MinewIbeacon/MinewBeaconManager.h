@@ -1,39 +1,65 @@
 //
-//  DeviceManager.h
-//  YlwlBeaconDemo
+//  MinewBeaconManager.h
+//  BeaconCFG
 //
-//  Created by SACRELEE on 16/8/24.
-//  Copyright © 2016年 com.YLWL. All rights reserved.
+//  Created by SACRELEE on 18/09/2016.
+//  Copyright © 2016 YLWL. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import "MinewBeacon.h"
 
-
+// bluetooth state enum.
 typedef NS_ENUM( NSInteger, BluetoothState) {
     
-    BluetoothStateUnsupported = 0,
-    BluetoothStatePowerOn,
-    BluetoothStatePowerOff,
+    BluetoothStateUnknown = 0,   // can't get the state of bluetooth
+    BluetoothStatePowerOn,       // bluetooth power on
+    BluetoothStatePowerOff,      // bluetooth power off
     
 };
 
-@class MinewBeacon, MinewBeaconManager;
+
+@class MinewBeaconManager;
 
 
 @protocol MinewBeaconManagerDelegate <NSObject>
 
 @optional
 
-// 蓝牙状态改变
+/**
+ *  listen the state of bluetooth
+ *
+ *  @param manager a manager instance
+ *  @param state   current bluetooth state
+ */
 - (void)minewBeaconManager:(MinewBeaconManager *)manager didUpdateState:(BluetoothState)state;
 
-// 发现了新的设备
+
+/**
+ *  if manager scanned some new beacons, this method will call back.
+ *
+ *  @param manager a manager instance.
+ *  @param beacons all new beacons.
+ */
 - (void)minewBeaconManager:(MinewBeaconManager * )manager appearBeacons:(NSArray<MinewBeacon *> *)beacons;
 
-// 离开了某个设备的信号范围
+/**
+ *  if a beacon didn't update any data (such as rssi/battery etc.) after 8 seconds since last
+ *  update time, the manager think it has already out of the scanning range, 
+ *  so this method will call back.
+ *
+ *  @param manager a manager instance
+ *  @param beacons all disappear beacons.
+ */
 - (void)minewBeaconManager:(MinewBeaconManager * )manager disappearBeacons:(NSArray<MinewBeacon *> *)beacons;
 
-// 每1秒回调一次，当前发现的所有设备，用于数据更新等。
+/**
+ *  if the manager scanned some beacons,this method call back every 1 second for giving newest 
+ *  data / UI refreshing and so on.
+ *
+ *  @param manager a manager instance
+ *  @param beacons all scanned beacons.
+ */
 - (void)minewBeaconManager:(MinewBeaconManager * )manager didRangeBeacons:(NSArray<MinewBeacon *> * )beacons;
 
 @end
@@ -41,28 +67,26 @@ typedef NS_ENUM( NSInteger, BluetoothState) {
 
 @interface MinewBeaconManager : NSObject
 
-// 单例
+// delegate
+@property (nonatomic, weak) id<MinewBeaconManagerDelegate> delegate;
+
+// all beacons scanned.
+@property (nonatomic, readonly, copy) NSArray<MinewBeacon *> *scannedBeacons;
+
+// all beacons in range.
+@property (nonatomic, readonly, copy) NSArray<MinewBeacon *> *inRangeBeacons;
+
+// 当前的蓝牙状态
+@property (nonatomic, readonly, assign) BluetoothState bluetoothState;
+
+// a sharedinstance of the manager.
 + (MinewBeaconManager  *)sharedInstance;
 
-// 检查蓝牙状态
-- (BluetoothState)checkBluetoothState;
+// 
+- (void)startScan;
 
-// 开始扫描设备
-- (void)startScan:(NSArray<NSString *> *)uuids backgroundSupport:(BOOL)enable;
 
-// 停止扫描设备
 - (void)stopScan;
-
-// 代理指针
-@property ( nonatomic, weak) id<MinewBeaconManagerDelegate> delegate;
-
-// 扫描到的所有设备
-@property ( nonatomic, readonly, copy) NSArray<MinewBeacon *> *scannedBeacons;
-
-// 在范围内的设备
-@property ( nonatomic, readonly, copy) NSArray<MinewBeacon *> *inRangeBeacons;
 
 
 @end
-
-

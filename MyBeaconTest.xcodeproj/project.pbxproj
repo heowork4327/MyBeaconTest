@@ -17,6 +17,7 @@
 		2A284EE0293496CA002E7F4B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A284EDF293496CA002E7F4B /* SnapKit */; };
 		2A284EE329349D35002E7F4B /* MyCustom+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A284EE229349D35002E7F4B /* MyCustom+Extension.swift */; };
 		2A4FEE6C2935FA860004F24A /* MinewTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4FEE6B2935FA860004F24A /* MinewTestViewController.swift */; };
+		2A918E482937307800ED8165 /* libMinewBeaconAdmin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A918E462937307800ED8165 /* libMinewBeaconAdmin.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,13 +31,13 @@
 		2A284ED229348FD8002E7F4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A284EDC293491EC002E7F4B /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTableViewCell.swift; sourceTree = "<group>"; };
 		2A284EE229349D35002E7F4B /* MyCustom+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyCustom+Extension.swift"; sourceTree = "<group>"; };
-		2A4FEE652935F9890004F24A /* MinewBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinewBeaconManager.h; sourceTree = "<group>"; };
-		2A4FEE662935F9890004F24A /* MinewBeaconValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinewBeaconValue.h; sourceTree = "<group>"; };
-		2A4FEE672935F9A30004F24A /* MinewBeaconSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinewBeaconSetting.h; sourceTree = "<group>"; };
-		2A4FEE682935F9A30004F24A /* MinewBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MinewBeacon.h; path = "../../../../Downloads/26_ICES_BEACON/BeaconAdmin/iOS/[iOS]MinewBeaconAdmin x86&ARM 2020.09.18 11_23AM/MinewBeacon.h"; sourceTree = "<group>"; };
-		2A4FEE692935F9A30004F24A /* MinewBeaconConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinewBeaconConnection.h; sourceTree = "<group>"; };
-		2A4FEE6A2935F9E40004F24A /* MinewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinewHeader.h; sourceTree = "<group>"; };
 		2A4FEE6B2935FA860004F24A /* MinewTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinewTestViewController.swift; sourceTree = "<group>"; };
+		2A4FEE6D293602DB0004F24A /* MyBeaconTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyBeaconTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		2A918E432937307800ED8165 /* MinewBeaconSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinewBeaconSetting.h; sourceTree = "<group>"; };
+		2A918E442937307800ED8165 /* MinewBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinewBeacon.h; sourceTree = "<group>"; };
+		2A918E452937307800ED8165 /* MinewBeaconConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinewBeaconConnection.h; sourceTree = "<group>"; };
+		2A918E462937307800ED8165 /* libMinewBeaconAdmin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMinewBeaconAdmin.a; sourceTree = "<group>"; };
+		2A918E472937307800ED8165 /* MinewBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinewBeaconManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A918E482937307800ED8165 /* libMinewBeaconAdmin.a in Frameworks */,
 				2A284EE0293496CA002E7F4B /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,7 +81,6 @@
 				2A284ECD29348FD8002E7F4B /* Assets.xcassets */,
 				2A284ECF29348FD8002E7F4B /* LaunchScreen.storyboard */,
 				2A284ED229348FD8002E7F4B /* Info.plist */,
-				2A4FEE6A2935F9E40004F24A /* MinewHeader.h */,
 			);
 			path = MyBeaconTest;
 			sourceTree = "<group>";
@@ -128,11 +129,12 @@
 		2A4FEE632935F96C0004F24A /* MinewIbeacon */ = {
 			isa = PBXGroup;
 			children = (
-				2A4FEE652935F9890004F24A /* MinewBeaconManager.h */,
-				2A4FEE662935F9890004F24A /* MinewBeaconValue.h */,
-				2A4FEE682935F9A30004F24A /* MinewBeacon.h */,
-				2A4FEE692935F9A30004F24A /* MinewBeaconConnection.h */,
-				2A4FEE672935F9A30004F24A /* MinewBeaconSetting.h */,
+				2A918E462937307800ED8165 /* libMinewBeaconAdmin.a */,
+				2A918E442937307800ED8165 /* MinewBeacon.h */,
+				2A918E452937307800ED8165 /* MinewBeaconConnection.h */,
+				2A918E472937307800ED8165 /* MinewBeaconManager.h */,
+				2A918E432937307800ED8165 /* MinewBeaconSetting.h */,
+				2A4FEE6D293602DB0004F24A /* MyBeaconTest-Bridging-Header.h */,
 				2A4FEE6B2935FA860004F24A /* MinewTestViewController.swift */,
 			);
 			path = MinewIbeacon;
@@ -302,6 +304,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -355,6 +358,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -380,6 +384,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MyBeaconTest/MinewIbeacon",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.heowork4327.Beacon.MyBeaconTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -387,7 +395,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyBeaconTest/MinewIbeacon/MyBeaconTest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -413,6 +421,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MyBeaconTest/MinewIbeacon",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.heowork4327.Beacon.MyBeaconTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -420,7 +432,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyBeaconTest/MinewIbeacon/MyBeaconTest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

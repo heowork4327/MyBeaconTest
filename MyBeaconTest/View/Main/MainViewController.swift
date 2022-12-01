@@ -84,14 +84,11 @@ class MainViewController: UIViewController {
     }
     
     private func initUI(){
+        
         self.view.addSubview(self.listTableView)
         self.view.addSubview(self.setUpButton)
         self.view.addSubview(self.locationSetButton)
         self.view.addSubview(minewViewButton)
-        self.listTableView.snp.makeConstraints { make in
-            make.top.equalTo(self.view.safeAreaLayoutGuide).inset(100)
-            make.left.right.bottom.equalTo(self.view.safeAreaLayoutGuide).inset(20)
-        }
         
         self.setUpButton.snp.makeConstraints { make in
             make.top.left.equalTo(self.view.safeAreaLayoutGuide).offset(20)
@@ -105,8 +102,13 @@ class MainViewController: UIViewController {
         }
         
         minewViewButton.snp.makeConstraints { make in
-            make.top.equalTo(locationSetButton.snp.top)
-            make.left.equalTo(locationSetButton.snp.right).offset(20)
+            make.top.equalTo(setUpButton.snp.bottom).offset(10)
+            make.left.equalTo(setUpButton.snp.left)
+        }
+        
+        listTableView.snp.makeConstraints { make in
+            make.top.equalTo(minewViewButton.snp.bottom).offset(15)
+            make.left.right.bottom.equalTo(view.safeAreaLayoutGuide).inset(20)
         }
     }
     
